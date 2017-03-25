@@ -194,8 +194,8 @@ he:
   form_dream_scholarship_budget_max_original: "תקציב פרויקט"
   form_dream_scholarship_budget_max_original_desc: "פרטו מה התוספת מאפשרת"
   form_dream_scholarship_budget_form_desc: "אנא מלאו בקובץ הבא את התקציב שלכם. שימו לב זה קובץ אישי שלכם והוא נוצר כשיצרתם את חלום."
-  form_dream_scholarship_bank_account_info: "פרטי חשבון בנק אליו תועבר המלגה:"
   form_dream_scholarship_bank_account_info_guidetext_html: "שם בעל החשבון/מס בנק/סניף/חשבון"
+  form_dream_scholarship_bank_account_holder_address_guidetext_html: "רחוב/מספר/יישוב/מיקוד"
   form_dream_scholarship_financial_conduct: "התנהלות פיננסית"
   form_dream_scholarship_financial_conduct_is_intial_budget: "האם קיים התקציב הראשוני לקיום הפרויקט?"
   form_dream_scholarship_financial_conduct_intial_budget_desc: "אם הבקשה תתקבל, מלגה מוענקת רק לאחר ביצוע המיצב ועמידה בתנאי המלגה (כחודש וחצי לאחר מידברן). כיצד אתם מתכוונים לממן את בניית המיצב?"
@@ -631,7 +631,9 @@ he:
         dreamscholarship_budget_min_original: :form_dream_scholarship_budget_min_original
         dreamscholarship_budget_max_original: :form_dream_scholarship_budget_max_original
         dreamscholarship_budget_max_original_desc: :form_dream_scholarship_budget_max_original_desc
-        dreamscholarship_bank_account_info: :form_dream_scholarship_bank_account_info
+        dreamscholarship_bank_account_info: "פרטי חשבון בנק אליו תועבר המלגה:"
+        dreamscholarship_bank_account_holder_id: מספר תעודת זהות של בעל החשבון
+        dreamscholarship_bank_account_holder_address: כתובת מגורים של בעל החשבון
         dreamscholarship_financial_conduct_is_intial_budget: :form_dream_scholarship_financial_conduct_is_intial_budget
         dreamscholarship_financial_conduct_intial_budget_desc: "כיצד תממנו את בניית המיצב"
         dreamscholarship_financial_conduct_money_raise_desc: :form_dream_scholarship_financial_conduct_money_raise_desc

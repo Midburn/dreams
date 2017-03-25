@@ -223,10 +223,9 @@ en:
   form_dream_scholarship_budget_form_desc: Please fill in your budget details in the
     following file. This file is your personal file and was created when you created
     Dream.
-  form_dream_scholarship_bank_account_info: Bank account information to which the
-    scholarship would be wired to.
   form_dream_scholarship_bank_account_info_guidetext_html: Name of account holder/bank
     no./branch/account number
+  form_dream_scholarship_bank_account_holder_address_guidetext_html: "Street/Number/City/Postal code"
   form_dream_scholarship_financial_conduct: Financial conduct
   form_dream_scholarship_financial_conduct_is_intial_budget: Has the project bare minimum budget met?
   form_dream_scholarship_financial_conduct_intial_budget_desc: Upon approval, scholarships will be granted only after the art installation has been completed and once it's approved as "in line with scholarship's requirements" (approx. 45 days after the event). How are you planning on financing the construction of your art installation?
@@ -664,7 +663,9 @@ en:
         dreamscholarship_budget_min_original: :form_dream_scholarship_budget_min_original
         dreamscholarship_budget_max_original: :form_dream_scholarship_budget_max_original
         dreamscholarship_budget_max_original_desc: :form_dream_scholarship_budget_max_original_desc
-        dreamscholarship_bank_account_info: :form_dream_scholarship_bank_account_info
+        dreamscholarship_bank_account_info: "Bank account information to which the scholarship would be wired to."
+        dreamscholarship_bank_account_holder_id: ID number of the account holder
+        dreamscholarship_bank_account_holder_address: Home address of the account holder
         dreamscholarship_financial_conduct_is_intial_budget: :form_dream_scholarship_financial_conduct_is_intial_budget
         dreamscholarship_financial_conduct_money_raise_desc: :form_dream_scholarship_financial_conduct_money_raise_desc
         dreamscholarship_execution_potential_previous_experience: :form_dream_scholarship_execution_potential_previous_experience
