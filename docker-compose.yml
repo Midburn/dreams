@@ -1,0 +1,50 @@
+version: '2'
+
+services:
+    db:
+        image: postgres
+        environment:
+            - POSTGRES_USER
+            - POSTGRES_DB
+            - POSTGRES_PASSWORD
+    dreams:
+        build: ./
+        image: dreams
+        environment:
+            - APP_URL=localhost
+            - AWS_ACCESS_KEY_ID
+            - AWS_SECRET_ACCESS_KEY
+            - CREW_SIZE=true
+            - DATABASE_URL=postgres://db
+            - DISABLE_EDITING_DREAM=false
+            - EMAIL_FROM=art@midburn.org
+            - GOOGLE_APPS_NAME=Midburn Dreams Google Apps Script
+            - GOOGLE_APPS_SCRIPT
+            - GOOGLE_APPS_SCRIPT_FUNCTION=createDream
+            - GOOGLE_APPS_SCRIPT_TOKEN
+            - GOOGLE_CLIENT_SECRETS
+            - GOOGLE_DRIVE_INTEGRATION=false
+            - LANG=en_US.UTF-8
+            - MULTI_LANG_SUPPORT=true
+            - PERSON_EARLY_ARRIVAL=true
+            - PERSON_HAS_TICKET=true
+            - RACK_ENV=production
+            - RAILS_ENV=production
+            - RAILS_SERVE_STATIC_FILES=enabled
+            - RAYGUN_APIKEY
+            - RECAPTCHA_SECRET_KEY
+            - RECAPTCHA_SITE_KEY
+            - S3_BUCKET_NAME
+            - SECRET_KEY_BASE
+            - SENDGRID_PASSWORD
+            - SENDGRID_USERNAME
+            - SHOW_POINT_OF_CONTACT=true
+            - SHOW_SAFETY_FILE_COMMENTS=true
+            - SPARK=true
+            - SPARK_TOKEN
+            - SPARK_URL=https://spark.midburn.org/api/userlogin
+            - TZ=Asia/Jerusalem
+        links:
+            - db
+        ports:
+            - "3000:3000"
