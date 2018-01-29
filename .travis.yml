@@ -25,7 +25,7 @@ install:
 script:
   - if [ -z "${DEPLOY_ENVIRONMENT}" ]; then docker build . -t dreams; fi
   - if [ -z "${DEPLOY_ENVIRONMENT}" ]; then bundle exec rspec spec -fd; fi
-  - .travis/continuous_deployment.sh
+  - ./continuous_deployment_travis.sh
 notifications:
   email: false
 
