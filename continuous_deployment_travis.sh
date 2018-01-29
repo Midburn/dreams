@@ -14,7 +14,7 @@ then
     fi
     B64_UPDATE_VALUES=`echo '{"dreams":{"image":"'${IMAGE_TAG}'"}}' | base64 -w0`
     wget https://raw.githubusercontent.com/OriHoch/sk8s-ops/master/run_docker_ops.sh
-    chmod +x run_docker_ops.sh bin/continuous_deployment.sh
+    chmod +x *.sh
     ! ./run_docker_ops.sh "${DEPLOY_ENVIRONMENT}" "/dreams/continuous_deployment.sh" \
                           "orihoch/sk8s-ops" "${OPS_REPO_SLUG}" "${OPS_REPO_BRANCH}" "" "
                             -v `pwd`:/dreams

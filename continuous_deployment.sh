@@ -16,7 +16,7 @@ cd /ops
 cd /dreams;
 
 ! gcloud container builds submit --substitutions _IMAGE_TAG=${IMAGE_TAG} \
-                                 --config bin/continuous_deployment_cloudbuild.yaml \
+                                 --config continuous_deployment_cloudbuild.yaml \
                                  . \
     && echo 'failed to build dreams image' && RES=1;
 
