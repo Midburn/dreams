@@ -1,13 +1,13 @@
 steps:
-#- name: gcr.io/cloud-builders/docker
-#  args:
-#  - pull
-#  - gcr.io/midbarrn/midburn-dreams-latest
+- name: gcr.io/cloud-builders/docker
+  args:
+  - pull
+  - gcr.io/midbarrn/midburn-dreams-latest
 - name: gcr.io/cloud-builders/docker
   args:
   - build
-#  - "--cache-from"
-#  - gcr.io/midbarrn/midburn-dreams-latest
+  - "--cache-from"
+  - gcr.io/midbarrn/midburn-dreams-latest
   - "-t"
   - gcr.io/midbarrn/midburn-dreams-latest
   - "-t"

@@ -27,3 +27,5 @@ then
                           " \
         && echo 'failed to run docker ops' && exit 1
 fi
+
+exit 0

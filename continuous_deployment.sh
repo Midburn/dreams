@@ -4,6 +4,13 @@ HELM_UPDATE_COMMIT_MESSAGE="${K8S_ENVIRONMENT_NAME} dreams image update --no-dep
 
 RES=0
 
+cd /dreams;
+
+! gcloud container builds submit --substitutions _IMAGE_TAG=${IMAGE_TAG} \
+                                 --config continuous_deployment_cloudbuild.yaml \
+                                 . \
+    && echo 'failed to build dreams image' && RES=1;
+
 cd /ops
 
 ! ./helm_update_values.sh "${B64_UPDATE_VALUES}" "${HELM_UPDATE_COMMIT_MESSAGE}" "${K8S_OPS_GITHUB_REPO_TOKEN}" \
@@ -12,13 +19,6 @@ cd /ops
 
 # ! kubectl set image deployment/dreams "dreams=${IMAGE_TAG}" \
 #    && echo 'failed to patch dreams deployment' && RES=1;
-
-cd /dreams;
-
-! gcloud container builds submit --substitutions _IMAGE_TAG=${IMAGE_TAG} \
-                                 --config continuous_deployment_cloudbuild.yaml \
-                                 . \
-    && echo 'failed to build dreams image' && RES=1;
 
 #while ! kubectl rollout status deployment dreams --watch=false; do
 #    echo 'waiting for dreams deployment rollout';
