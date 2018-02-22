@@ -315,16 +315,22 @@ en:
     Attention! Coordination of needs will be performed privately
     with the art department.
   form_safety_plan: A detailed engineering plan of the art installation
-  form_safety_plan_guidetext_html: 1. A general plan of the structure specifying the
-    general measurements of each of the structures components. 2. An enlarged blueprint
-    presenting the connection between all of the structures components, the anchorage
-    to the ground and any mechanical systems that may exist. 3. Any additional plans
-    that present a progression of construction (the more the construction is direct),
-    meaning, a description of the way in which the construct is stabilized during
-    the work (in case that further down the line some design determining elements
-    might be added and account for the permanent stabilization of the construct),
-    and finally a consideration of anchoring points when dealing with the pulling
-    of heavy components.
+  form_safety_plan_guidetext_html: >
+      1. A general plan of the structure specifying the
+      general measurements of each of the structures components.<br>
+      2. An enlarged blueprint
+      presenting the connection between all of the structures components, the anchorage
+      to the ground and any mechanical systems that may exist.<br>
+      3. Any additional plans
+      that present a progression of construction (the more the construction is direct),
+      meaning, a description of the way in which the construct is stabilized during
+      the work (in case that further down the line some design determining elements
+      might be added and account for the permanent stabilization of the construct),
+      and finally a consideration of anchoring points when dealing with the pulling
+      of heavy components.<br>
+      The plans should be uploaded <a href="images">as image files</a>.<br>
+      Please notice! Coordination of needs will be performed privately with the art department on <a href="mailto:technicaltealart2018@gmail.com">technicaltealart2018@gmail.com</a>
+
   form_safety_prince: Safety key points
   form_safety_equipment_desc: 'The required safety equipment for construction '
   form_safety_equipment_guidetext_html: Sunshades, water, protective equipment such
