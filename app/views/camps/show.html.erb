@@ -452,14 +452,14 @@
                   <h2 class="header-sub-heading"><%=t Camp.human_attribute_name("safety_file_comments") %></h2>
                 </div>
                 <div class="panel-body">
-                <% if @camp.creator == current_user %>
+                <% if current_user.guide || current_user.admin %>
+                    <%= render 'edit_safety_file_comments' %>
+                <% elsif @camp.creator == current_user %>
                     <% if @camp.safety_file_comments.blank? %>
                         <%= t :dream_safety_file_comments_nop_message %>
                     <% else %>
                         <%= simple_format @camp.safety_file_comments %>
                     <% end %>
-                <% elsif current_user.guide || current_user.admin %>
-                    <%= render 'edit_safety_file_comments' %>
                 <% end %>
                 </div>
             </div>
