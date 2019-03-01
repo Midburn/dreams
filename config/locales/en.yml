@@ -512,6 +512,7 @@ en:
   fully_funded: Fully funded
   grants_recieved: Grants Received
   granting_not_enabled: Granting disabled
+  dream_creation_not_enabled: Dream Creation disabled
   not_funded_yet: Not funded yet
   funded: Funded
   funded_hearts: Hearts received

@@ -47,6 +47,10 @@ class CampsController < ApplicationController
 
   def create
     # Create camp without people then add them
+    unless Lockdown.instance.allowed?('submit_dream')
+      flash[:alert] = t('dream_creation_not_enabled')
+      return redirect_to root_path
+    end
     @camp = Camp.new(camp_params)
     @camp.creator = current_user
     @camp.event_id = Rails.application.config.default_event
@@ -135,6 +139,10 @@ class CampsController < ApplicationController
   end
 
   def update
+    unless Lockdown.instance.allowed?('submit_dream')
+      flash[:alert] = t('dream_creation_not_enabled')
+      return redirect_to root_path
+    end
     if (@camp.creator != current_user) and !current_user.admin and !current_user.guide
       flash[:alert] = "#{t:security_cant_edit_dreams_you_dont_own}"
       redirect_to camp_path(@camp) and return
