@@ -181,3 +181,15 @@ Update the dreams section here with the new values:  https://github.com/Midburn/
 Some values are hardcoded in the external-chart (https://github.com/Midburn/midburn-k8s/blob/master/charts-external/dreams/templates/dreams.yaml) , If possible those should be moved to the environments/../values.yaml before updating them.
 ##### Updating production version
 To update the version in midburn-k8s production one should create a new "release" on github and a new production version will be deployed automagically. If we want to rollback we can update the release number on https://github.com/Midburn/midburn-k8s/blob/master/environments/production/values.auto-updated.yaml#L6
+
+# Trouble shooting
+
+## macOS High Sierra
+
+Due to changes in the OS, the following needs to be set before running the server locally:
+
+```sh
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+```
+
+Per [Why Ruby app servers break on macOS High Sierra and what can be done about it](https://blog.phusion.nl/2017/10/13/why-ruby-app-servers-break-on-macos-high-sierra-and-what-can-be-done-about-it/)
